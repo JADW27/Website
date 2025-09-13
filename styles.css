@@ -43,10 +43,11 @@ body {
       margin-right: 30px;
       overflow: hidden;
     }
-    #profile-picture img {
-      width: 100%;
-      height: auto;
-    }
+	#profile-picture img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;   /* fill the square without distortion */
+	}
     #profile-text {
       max-width: 500px;
     }
