@@ -363,52 +363,20 @@ main {
   color: #666;
 }
 
-/* ===== Mobile-friendly tweaks (add to END of styles.css) ===== */
-
-/* Let nav wrap nicely on small screens */
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px 10px;         /* space between links */
-}
-
-/* Make any image shrink to fit the screen */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* General container padding tighter on small screens */
+/* Mobile tweaks */
 @media (max-width: 768px) {
-  header { padding: 14px; }
-  nav { padding: 10px; }
-
-  /* Stack the profile section (home page) instead of side-by-side */
   #profile-container {
-    flex-direction: column;
+    flex-direction: column;     /* stack image above text */
+    align-items: center;
     padding: 0 16px;
     gap: 14px;
   }
   #profile-picture {
-    width: 140px;
+    width: 140px;               /* smaller on phones */
     height: 140px;
-    margin: 0;           /* remove right margin when stacked */
+    margin: 0;                  /* remove right margin when stacked */
   }
   #profile-text { max-width: 100%; }
-
-  /* Trim padding in content sections so text doesn't feel cramped */
-  #publications-container,
-  #teaching-container,
-  #tools-container,
-  #about-me-container,
-  #consulting-container,
-  #contact-container {
-    padding: 16px;
-    margin: 16px auto;
-  }
-
-  /* Slightly tighter item spacing on phones */
-  .publication, .course { padding: 12px 0; }
-  .section { padding: 14px 0; }
+  nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 10px; }
+  img { max-width: 100%; height: auto; }  /* any other images scale down */
 }
