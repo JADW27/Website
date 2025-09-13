@@ -365,24 +365,19 @@ main {
   color: #666;
 }
 
-/* Mobile tweaks */
-@media (max-width: 768px) {     /* Photo settings for phones/mobile */
+@media (max-width: 768px) {
   #profile-container {
-    flex-direction: column;     /* stack image above text */
+    flex-direction: column;
     align-items: center;
     padding: 0 16px;
     gap: 14px;
   }
-@media (min-width: 769px) {     /* Photo settings for computers */
-  #profile-picture img {
-    object-position: 50% 40%;   /* tweak this number to move image down/up, 60–70% shows more top of the head; 50–55% moves it up */
-  }
   #profile-picture {
-    width: 140px;               /* smaller on phones */
+    width: 140px;
     height: 140px;
-    margin: 0;                  /* remove right margin when stacked */
+    margin: 0;
   }
   #profile-text { max-width: 100%; }
   nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 10px; }
-  img { max-width: 100%; height: auto; }  /* any other images scale down */
+  img { max-width: 100%; height: auto; }
 }
