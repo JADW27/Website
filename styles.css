@@ -47,7 +47,7 @@ body {
 	  width: 100%;
 	  height: 100%;
 	  object-fit: cover;   /* fill the square without distortion */
-	  object-position: 50% 60%;   /* move image slightly down to show more top of head */
+	  object-position: 50% 10%;   /* move image slightly down to show more top of head */
 	}
     #profile-text {
       max-width: 500px;
