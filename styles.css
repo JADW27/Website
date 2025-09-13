@@ -47,6 +47,7 @@ body {
 	  width: 100%;
 	  height: 100%;
 	  object-fit: cover;   /* fill the square without distortion */
+	  object-position: 50% 60%;   /* move image slightly down to show more top of head */
 	}
     #profile-text {
       max-width: 500px;
@@ -365,12 +366,16 @@ main {
 }
 
 /* Mobile tweaks */
-@media (max-width: 768px) {
+@media (max-width: 768px) {     /* Photo settings for phones/mobile */
   #profile-container {
     flex-direction: column;     /* stack image above text */
     align-items: center;
     padding: 0 16px;
     gap: 14px;
+  }
+@media (min-width: 769px) {     /* Photo settings for computers */
+  #profile-picture img {
+    object-position: 50% 55%;   /* tweak this number to move image down/up, 60–70% shows more top of the head; 50–55% moves it up */
   }
   #profile-picture {
     width: 140px;               /* smaller on phones */
